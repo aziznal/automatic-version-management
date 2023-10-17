@@ -1,5 +1,14 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+# Auto Version Management
+
+This repo is a playground for experimenting and implementing the following:
+- Automatic version management
+- Commit Lint
+- Any necessary supporting actions (such as verifying a PR's title)
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
