@@ -6,6 +6,8 @@ on:
 jobs:
   bump_release_version:
     runs-on: ubuntu-latest
+    # only allow this to run from develop
+    if: github.ref == 'refs/heads/develop'
 
     steps:
       - name: Check out code
