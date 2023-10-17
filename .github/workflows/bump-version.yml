@@ -32,12 +32,17 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add VERSION 
+
+          # Check for changes
+          if git diff --cached --quiet; then
+            echo "No changes detected, skipping commit."
+            exit 0
+          fi
+
           NEW_VERSION=$(cat VERSION)
           git commit -m "chore: auto-bump version to $NEW_VERSION"
           git push
 
-      - name: Create Git Tag
-        run: |
-          NEW_VERSION=$(cat VERSION)
           git tag "v$NEW_VERSION"
           git push --tags
+
