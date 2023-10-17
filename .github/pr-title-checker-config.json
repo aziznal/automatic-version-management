@@ -4,10 +4,10 @@
     "color": "EEEEEE"
   },
   "CHECKS": {
-    "prefixes": ["fix: ", "feat: ", "ci: "],
+    "prefixes": ["fix: ", "feat: ", "ci: ", "docs: "],
     "regexp": "docs\\(v[0-9]\\): ",
     "regexpFlags": "i",
-    "ignoreLabels" : ["dont-check-PRs-with-this-label", "meta"]
+    "ignoreLabels": ["dont-check-PRs-with-this-label", "meta"]
   },
   "MESSAGES": {
     "success": "All OK",
