@@ -29,6 +29,7 @@ const patchKeywords = [
   "refactor",
   "test",
   "chore",
+  "ci"
 ];
 
 // Increment version based on keywords in commit message
