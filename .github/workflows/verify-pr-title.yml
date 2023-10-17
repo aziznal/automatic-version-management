@@ -8,6 +8,7 @@ on:
       - synchronize
       - labeled
       - unlabeled
+
 jobs:
   verify_pr_title:
     runs-on: ubuntu-latest
