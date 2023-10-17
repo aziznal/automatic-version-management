@@ -19,7 +19,6 @@ const commitMsg = execSync("git log -1 --pretty=%B").toString().trim();
 // Read current version from VERSION file
 let version = fs.readFileSync("VERSION", "utf-8").trim().split(".").map(Number);
 
-const releaseKeywords = ["release"];
 const featureKeywords = ["feat"];
 const patchKeywords = [
   "patch",
@@ -33,10 +32,7 @@ const patchKeywords = [
 ];
 
 // Increment version based on keywords in commit message
-if (releaseKeywords.some((keyword) => commitMsg.includes(keyword))) {
-  version[0]++;
-  version[2] = 0; // patche counter is reset on release
-} else if (featureKeywords.some((keyword) => commitMsg.includes(keyword))) {
+if (featureKeywords.some((keyword) => commitMsg.includes(keyword))) {
   version[1]++;
 } else if (patchKeywords.some((keyword) => commitMsg.includes(keyword))) {
   version[2]++;
